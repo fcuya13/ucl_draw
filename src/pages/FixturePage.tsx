@@ -4,6 +4,7 @@ import PageLayout from "../components/PageLayout";
 import React, {useEffect, useState} from "react";
 import {JornadaData, MatchData, Team} from "../types";
 import Match from "../components/Match";
+import { client } from '../redis';
 
 const FixturePage = () => {
     const location = useLocation()
@@ -16,7 +17,11 @@ const FixturePage = () => {
         const response = await fetch('https://ucldrawserverless.s3.us-east-2.amazonaws.com/teams.json')
         const data = await response.json()
         setTeams(data)
+        const test = await client.set('bike:1', 'Process 123')
+        const value = await client.get('bike:1')
+        console.log(test, value)
     }
+
 
     useEffect(() => {
         loadTeams()
