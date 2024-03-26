@@ -1,13 +1,24 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+    font-family: 'UCL';
+    src: url('fonts/Champions-Bold.ttf') format("truetype");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'UCL', sans-serif;
+}
+
+.gradient {
+    background:linear-gradient(to right, #091442 ,#05248c 50%, #9e16ce );
+}
+
+:where(.css-dev-only-do-not-override-42nv3w).ant-typography {
+    font-family: 'UCL', sans-serif;
+}
+
+:where(.css-dev-only-do-not-override-42nv3w).ant-btn {
+    font-family: 'UCL', sans-serif;
 }
