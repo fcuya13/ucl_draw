@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ucl_draw/static/css/main.6c281951.css",
+    "main.css": "/ucl_draw/static/css/main.a6afdb17.css",
     "main.js": "/ucl_draw/static/js/main.15adfb58.js",
     "static/js/885.9bfd3998.chunk.js": "/ucl_draw/static/js/885.9bfd3998.chunk.js",
     "index.html": "/ucl_draw/index.html",
-    "main.6c281951.css.map": "/ucl_draw/static/css/main.6c281951.css.map",
+    "main.a6afdb17.css.map": "/ucl_draw/static/css/main.a6afdb17.css.map",
     "main.15adfb58.js.map": "/ucl_draw/static/js/main.15adfb58.js.map",
     "885.9bfd3998.chunk.js.map": "/ucl_draw/static/js/885.9bfd3998.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c281951.css",
+    "static/css/main.a6afdb17.css",
     "static/js/main.15adfb58.js"
   ]
 }
