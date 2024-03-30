@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/ucl_draw/static/css/main.086bf08c.css",
+    "main.js": "/ucl_draw/static/js/main.1709cfe1.js",
+    "static/js/885.9bfd3998.chunk.js": "/ucl_draw/static/js/885.9bfd3998.chunk.js",
+    "static/media/Champions-Bold.ttf": "/ucl_draw/static/media/Champions-Bold.57b7551df03a20bed65e.ttf",
+    "static/media/Champions-Regular.ttf": "/ucl_draw/static/media/Champions-Regular.5dc1df3a38ce62c6b623.ttf",
+    "index.html": "/ucl_draw/index.html",
+    "main.086bf08c.css.map": "/ucl_draw/static/css/main.086bf08c.css.map",
+    "main.1709cfe1.js.map": "/ucl_draw/static/js/main.1709cfe1.js.map",
+    "885.9bfd3998.chunk.js.map": "/ucl_draw/static/js/885.9bfd3998.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.086bf08c.css",
+    "static/js/main.1709cfe1.js"
+  ]
+}
