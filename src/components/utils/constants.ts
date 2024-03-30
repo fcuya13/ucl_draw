@@ -1,0 +1,7 @@
+export const TEAMS = 'teams'
+export const HALL_OF_FAME = 'halloffame'
+export const COUNT = 'count'
+export const MATCHES = 'matches'
+export const RESULTS = 'results'
+export const POSITIONS = 'positions'
+export const QUALIFIED = 'qualified'
