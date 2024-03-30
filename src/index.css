@@ -1,14 +1,16 @@
 @font-face {
-    font-family: 'UCL';
+    font-family: 'UCL-Bold';
     src: url('fonts/Champions-Bold.ttf') format("truetype");
 }
-
-
+@font-face {
+    font-family: 'UCL-Regular';
+    src: url('fonts/Champions-Regular.ttf') format("truetype");
+}
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'UCL', sans-serif;
+    font-family: 'UCL-Bold', sans-serif;
 }
 
 .gradient {
@@ -16,9 +18,31 @@ body {
 }
 
 :where(.css-dev-only-do-not-override-42nv3w).ant-typography {
-    font-family: 'UCL', sans-serif;
+    font-family: 'UCL-Bold', sans-serif;
 }
 
 :where(.css-dev-only-do-not-override-42nv3w).ant-btn {
-    font-family: 'UCL', sans-serif;
+    font-family: 'UCL-Bold', sans-serif;
+}
+
+.ant-table-cell{
+    font-family: 'UCL-Regular', sans-serif;
+    font-size: 19px;
+    text-align: center;
+}
+
+.green{
+    background-color: #c2fccc;
+}
+
+.orange{
+    background-color: #fff0ca
+}
+
+.red {
+    background-color: #ffccd1;
+}
+
+.gray{
+    background-color: rgba(192, 192, 192, 0.61);
 }

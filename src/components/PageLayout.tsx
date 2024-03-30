@@ -1,9 +1,20 @@
 import {Layout, Typography} from "antd";
-import React, {PropsWithChildren} from "react";
+import React, { PropsWithChildren, useEffect, useState } from 'react';
 
 const PageLayout = ({children}: PropsWithChildren) => {
     const { Header, Footer } = Layout;
     const {Paragraph} = Typography
+    const [times, setTimes] = useState<number>(0)
+
+    const times_fn = async () => {
+        const response = await fetch('https://bam6bjtbj5.execute-api.us-east-2.amazonaws.com/get_drawn_times')
+        const data = await response.json()
+        setTimes(parseInt(data['body']))
+    }
+
+    useEffect(() => {
+        times_fn()
+    }, []);
 
     const headerStyle: React.CSSProperties = {
         textAlign: 'center',
@@ -27,11 +38,15 @@ const PageLayout = ({children}: PropsWithChildren) => {
         <Header className="gradient" style={headerStyle}>
             <Typography className="title" style={{
                 color: "white",
-                fontSize: 32,
+                fontSize: 40,
                 fontWeight: "bold",
-                margin: 5,
+                margin: 'auto',
+                marginTop: 5,
+                marginBottom: 5,
+                width:"50%",
+
             }} >
-                UCL Group Stage Draw
+                UEFA Champions League 24-25 Group Stage Draw
             </Typography>
         </Header>
         {children}
@@ -41,7 +56,7 @@ const PageLayout = ({children}: PropsWithChildren) => {
                     2024 Franco Cuya | All Rights Reserved
                 </Paragraph>
                 <Paragraph style={{color:"white",  marginBottom:0}}>
-                    www.github.com/fcuya13
+                    Este sorteo ha sido completado {times} veces
                 </Paragraph>
             </Typography>
         </Footer>

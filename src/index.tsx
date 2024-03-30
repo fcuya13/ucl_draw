@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import {
     createBrowserRouter, RouterProvider,
 } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import FixturePage from "./pages/FixturePage";
+import PositionsPage from './pages/PositionsPage';
+import KnockoutPage from './pages/KnockoutPage';
+import HallOfFamePage from './pages/HallOfFamePage';
 
 const router = createBrowserRouter([
     {
@@ -16,6 +18,18 @@ const router = createBrowserRouter([
     {
         path: "/matches",
         element: <FixturePage/>
+    },
+    {
+        path: "/positions",
+        element: <PositionsPage/>
+    },
+    {
+        path: "/knockout",
+        element: <KnockoutPage/>
+    },
+    {
+        path: "/halloffame",
+        element: <HallOfFamePage/>
     }
 ]);
 

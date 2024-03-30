@@ -1,7 +1,7 @@
 import {Flex, Typography} from "antd";
 import BomboTeam from "./BomboTeam";
 import { Divider } from "antd";
-import {Team} from "../types";
+import {Team} from "./utils/types";
 const {Title} = Typography;
 
 interface BomboProps{
