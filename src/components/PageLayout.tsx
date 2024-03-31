@@ -1,15 +1,20 @@
 import {Layout, Typography} from "antd";
 import React, { PropsWithChildren, useEffect, useState } from 'react';
+import { getValueFromSessionStorage, setValueToSessionStorage } from './utils/sessionUtils';
+import { COUNT } from './utils/constants';
 
 const PageLayout = ({children}: PropsWithChildren) => {
     const { Header, Footer } = Layout;
     const {Paragraph} = Typography
-    const [times, setTimes] = useState<number>(0)
+    const prevCountData = getValueFromSessionStorage(COUNT)
+    const [times, setTimes] = useState<number>(prevCountData)
 
     const times_fn = async () => {
         const response = await fetch('https://bam6bjtbj5.execute-api.us-east-2.amazonaws.com/get_drawn_times')
         const data = await response.json()
-        setTimes(parseInt(data['body']))
+        const timeData = parseInt(data['body'])
+        setTimes(timeData)
+        setValueToSessionStorage(COUNT,timeData)
     }
 
     useEffect(() => {

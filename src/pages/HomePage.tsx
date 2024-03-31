@@ -7,7 +7,7 @@ import PageLayout from "../components/PageLayout";
 import {LoadingOutlined} from "@ant-design/icons";
 import MenuButton from '../components/MenuButton';
 import { getValueFromSessionStorage, setValueToSessionStorage } from '../components/utils/sessionUtils';
-import { COUNT, MATCHES, RESULTS, TEAMS } from '../components/utils/constants';
+import { MATCHES, RESULTS, TEAMS } from '../components/utils/constants';
 const HomePage = () => {
     const [teams,setTeams] = useState<Team[] | null>(null)
     const [bombos, setBombos] = useState<Team[][] | null>(null)
@@ -15,8 +15,7 @@ const HomePage = () => {
     const navigate = useNavigate()
     const prevMatchesData = getValueFromSessionStorage(MATCHES)
     const prevTeamsData = getValueFromSessionStorage(TEAMS)
-    const prevCountData = getValueFromSessionStorage(COUNT)
-    const [count, setCount] = useState<number>(prevCountData ? parseInt(prevCountData): 1);
+    const [count, setCount] = useState<number>(1);
 
     const loadTeams = async() => {
         if (!prevTeamsData) {
@@ -28,7 +27,6 @@ const HomePage = () => {
         else{
             setTeams(prevTeamsData)
         }
-        setValueToSessionStorage(COUNT, count)
     }
 
 

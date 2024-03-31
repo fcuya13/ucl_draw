@@ -16,6 +16,7 @@ const Score = ({score, setScore}: any) => {
 
 	useEffect(() => {
 		checkScore()
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [score]);
 
 

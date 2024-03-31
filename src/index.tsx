@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import {
-    createBrowserRouter, RouterProvider,
-} from "react-router-dom";
+    createHashRouter, RouterProvider
+} from 'react-router-dom';
 import HomePage from "./pages/HomePage";
 import FixturePage from "./pages/FixturePage";
 import PositionsPage from './pages/PositionsPage';
 import KnockoutPage from './pages/KnockoutPage';
 import HallOfFamePage from './pages/HallOfFamePage';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: <HomePage />,

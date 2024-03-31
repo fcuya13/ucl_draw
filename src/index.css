@@ -1,10 +1,15 @@
 @font-face {
     font-family: 'UCL-Bold';
-    src: url('fonts/Champions-Bold.ttf') format("truetype");
+    font-style: normal;
+    font-weight: bold;
+    src: url("https://ucldrawserverless.s3.us-east-2.amazonaws.com/fonts/UCL/Champions-Bold.ttf") format('truetype');
 }
+
 @font-face {
     font-family: 'UCL-Regular';
-    src: url('fonts/Champions-Regular.ttf') format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    src: url("https://ucldrawserverless.s3.us-east-2.amazonaws.com/fonts/UCL/Champions-Regular.ttf") format('truetype');
 }
 
 body {
@@ -22,6 +27,14 @@ body {
 }
 
 :where(.css-dev-only-do-not-override-42nv3w).ant-btn {
+    font-family: 'UCL-Bold', sans-serif;
+}
+
+:where(.css-42nv3w).ant-btn {
+    font-family: 'UCL-Bold', sans-serif;
+}
+
+:where(.css-42nv3w).ant-typography {
     font-family: 'UCL-Bold', sans-serif;
 }
 
